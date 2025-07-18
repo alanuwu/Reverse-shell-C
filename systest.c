@@ -11,9 +11,7 @@ int main() {
   // fprintf(stdout, "Introduce un comando a ejecutar: ");
   fgets(line, MAX_LEN, inputstream);
 
-  for (;;) {
     system(line);
-  }
 
   fclose(inputstream);
   return 0;

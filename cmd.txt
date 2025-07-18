@@ -1,1 +1,1 @@
-lsof -i -P -n | grep -i listen
+neofetch 

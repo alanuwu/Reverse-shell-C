@@ -22,8 +22,7 @@ static int daemongen(char* const argv[]){
   if(pid > 0) _exit(0); //Primer hijo sale
 
 
-  int fd = open("log.txt", O_RDWR);
-  //Status error al acceder a /dev/null
+  int fd = open("log.txt", O_WRONLY | O_CREAT | O_TRUNC);
 
   if(fd != -1){
     dup2(fd, STDIN_FILENO);
