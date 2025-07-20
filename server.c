@@ -6,6 +6,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#define BUFFER_SIZE 4096
 
 //Funcion que enviara mensaje de error y salir del programa
 void error(const char* msg){
@@ -22,7 +23,7 @@ int main(int argc, char* argv[]){
   }
   int sockfd, newsockfd, portno, n;
   
-  char buffer[255];
+  char buffer[BUFFER_SIZE];
 
   struct sockaddr_in serv_addr, cli_addr;
 
@@ -63,17 +64,16 @@ int main(int argc, char* argv[]){
   
   while(1){
     //Limpiar contenido dentro del buffer
-    //El bufferSize = 255 porque hay que contemplar \0
-    bzero(buffer, 255);
-    n = read(newsockfd, buffer, 255);
+    bzero(buffer, BUFFER_SIZE);
+    n = read(newsockfd, buffer, BUFFER_SIZE);
     //fallo al leer el FD
     if( n < 0)
       error("Error al leer [server] en newsockfd");
     //Imprimir mensaje del cliente 
-    printf("Cliente: %s\n", buffer);
-    bzero(buffer, 255);
+    printf("OUTPUT: %s\n", buffer);
+    bzero(buffer, BUFFER_SIZE);
     //Obtener mensaje del server
-    fgets(buffer, 255, stdin);
+    fgets(buffer, BUFFER_SIZE, stdin);
 
     n = write(newsockfd, buffer, strlen(buffer));
 
@@ -86,7 +86,6 @@ int main(int argc, char* argv[]){
     if(i == 0)
     break;
     
-    //TODO: LEER VALOR DE STRLEN DEL BUFFER
   }
   close(newsockfd);
   close(sockfd);

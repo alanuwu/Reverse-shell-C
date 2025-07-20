@@ -1,0 +1,24 @@
+Script iniciado en 2025-07-19 19:15:10-06:00 [COMMAND="/bin/bash" <no ejecutado en terminal>]
+]0;mrchippu@maquinadefuego:~/apuntes/head_first_c/networking/reverse_shell[?2004h[01;32m[mrchippu@maquinadefuego[01;37m reverse_shell[01;32m]$[00m pwd
+[?2004l/home/mrchippu/apuntes/head_first_c/networking/reverse_shell
+]0;mrchippu@maquinadefuego:~/apuntes/head_first_c/networking/reverse_shell[?2004h[01;32m[mrchippu@maquinadefuego[01;37m reverse_shell[01;32m]$[00m 
+[?2004l]0;mrchippu@maquinadefuego:~/apuntes/head_first_c/networking/reverse_shell[?2004h[01;32m[mrchippu@maquinadefuego[01;37m reverse_shell[01;32m]$[00m ls -la
+[?2004ltotal 108
+drwxr-xr-x 3 mrchippu mrchippu  4096 jul 19 19:15 [0m[01;34m.[0m
+drwxr-xr-x 4 mrchippu mrchippu  4096 jul 13 22:09 [01;34m..[0m
+-rwxr-xr-x 1 mrchippu mrchippu 16152 jul 19 19:05 [01;32mclient[0m
+-rw-r--r-- 1 mrchippu mrchippu  2410 jul 19 19:09 client.c
+-rw-r--r-- 1 mrchippu mrchippu    10 jul 18 14:27 cmd.txt
+drwxr-xr-x 7 mrchippu mrchippu  4096 jul 18 15:41 [01;34m.git[0m
+-rw-r--r-- 1 mrchippu mrchippu    41 jul 17 21:01 .gitignore
+-rw-r--r-- 1 mrchippu mrchippu  2529 jul 18 14:31 log.txt
+-rwxr-xr-x 1 mrchippu mrchippu 16408 jul 19 19:15 [01;32mserver[0m
+-rw-r--r-- 1 mrchippu mrchippu  2609 jul 19 19:14 server.c
+-rwxr-xr-x 1 mrchippu mrchippu 16008 jul 18 14:30 [01;32msubprocess[0m
+-rw-r--r-- 1 mrchippu mrchippu  1207 jul 18 14:34 subprocess.c
+-rwxr-xr-x 1 mrchippu mrchippu 15632 jul 18 14:27 [01;32msystest[0m
+-rw-r--r-- 1 mrchippu mrchippu   370 jul 18 14:26 systest.c
+-rw-r--r-- 1 mrchippu mrchippu     0 jul 19 19:15 typescript
+]0;mrchippu@maquinadefuego:~/apuntes/head_first_c/networking/reverse_shell[?2004h[01;32m[mrchippu@maquinadefuego[01;37m reverse_shell[01;32m]$[00m 
+[?2004l]0;mrchippu@maquinadefuego:~/apuntes/head_first_c/networking/reverse_shell[?2004h[01;32m[mrchippu@maquinadefuego[01;37m reverse_shell[01;32m]$[00m 
+Script terminado en 2025-07-19 19:15:22-06:00 [CÓDIGO_SALIDA_ORDEN="0"]
