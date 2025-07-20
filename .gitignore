@@ -3,3 +3,5 @@ server
 subprocess
 systest
 log.txt
+cmd.txt
+typescript
